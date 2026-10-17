@@ -1,3 +1,10 @@
+soapyplutosdr (0.2.2-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Backport upstream fix for FTBFS with CMake 4. (Closes: #1125591)
+
+ -- Adrian Bunk <bunk@debian.org>  Sat, 28 Feb 2026 16:20:57 +0200
+
 soapyplutosdr (0.2.2-1) unstable; urgency=medium
 
   * Initial release (Closes: #1109151)
