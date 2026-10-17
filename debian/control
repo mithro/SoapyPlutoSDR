@@ -1,30 +1,39 @@
 Source: soapyplutosdr
-Section: libs
+Section: hamradio
 Priority: optional
-Maintainer: Christian W. Zuckschwerdt <zany@triq.net>
+Maintainer: Debian Hamradio Maintainers <debian-hams@lists.debian.org>
+Uploaders: Andreas Bombe <aeb@debian.org>
 Build-Depends:
-    debhelper,
+    debhelper-compat (= 13),
     cmake,
     libiio-dev,
     libad9361-dev,
-    libsoapysdr-dev
-Standards-Version: 4.5.0
+    libusb-1.0-0-dev,
+    libsoapysdr0.8-dev
+Standards-Version: 4.7.2
 Homepage: https://github.com/pothosware/SoapyPlutoSDR/wiki
-Vcs-Git: https://github.com/pothosware/SoapyPlutoSDR.git
-Vcs-Browser: https://github.com/pothosware/SoapyPlutoSDR
+Vcs-Browser: https://salsa.debian.org/debian-hamradio-team/soapysdr/soapyplutosdr
+Vcs-Git: https://salsa.debian.org/debian-hamradio-team/soapysdr/soapyplutosdr.git
+Rules-Requires-Root: no
 
-Package: soapysdr0.9-module-plutosdr
+Package: soapysdr0.8-module-plutosdr
 Architecture: any
 Multi-Arch: same
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: Soapy PlutoSDR - PlutoSDR device support for Soapy SDR.
- A Soapy module that supports PlutoSDR devices within the Soapy API.
+Provides: soapysdr0.8-module
+Description: Pluto SDR device support for SoapySDR
+ The Soapy Pluto SDR project provides a SoapySDR hardware support module.
+ Using this, any program using SoapySDR to interface to software
+ defined radio hardware can make use of Pluto SDR devices.
 
 Package: soapysdr-module-plutosdr
-Architecture: all
-Depends: soapysdr0.9-module-plutosdr, ${misc:Depends}
-Description: Soapy PlutoSDR - PlutoSDR device support for Soapy SDR.
- A Soapy module that supports PlutoSDR devices within the Soapy API.
+Architecture: any
+Multi-Arch: same
+Depends: soapysdr0.8-module-plutosdr, ${misc:Depends}
+Description: Pluto SDR device support for SoapySDR (default version)
+ The Soapy Pluto SDR project provides a SoapySDR hardware support module.
+ Using this, any program using SoapySDR to interface to software
+ defined radio hardware can make use of Pluto SDR devices.
  .
- This is an empty dependency package that pulls in the PlutoSDR module
+ This is an empty dependency package that pulls in the Pluto SDR module
  for the default version of libsoapysdr.
