@@ -1,8 +1,8 @@
 Source: soapyplutosdr
 Section: hamradio
 Priority: optional
-Maintainer: Debian Hamradio Maintainers <debian-hams@lists.debian.org>
-Uploaders: Andreas Bombe <aeb@debian.org>
+Maintainer: Tim 'mithro' Ansell <me@mith.ro>
+XSBC-Original-Maintainer: Debian Hamradio Maintainers <debian-hams@lists.debian.org>
 Build-Depends:
     debhelper-compat (= 13),
     cmake,
@@ -12,8 +12,8 @@ Build-Depends:
     libsoapysdr0.8-dev
 Standards-Version: 4.7.2
 Homepage: https://github.com/pothosware/SoapyPlutoSDR/wiki
-Vcs-Browser: https://salsa.debian.org/debian-hamradio-team/soapysdr/soapyplutosdr
-Vcs-Git: https://salsa.debian.org/debian-hamradio-team/soapysdr/soapyplutosdr.git
+Vcs-Browser: https://github.com/mithro/SoapyPlutoSDR/tree/packaging
+Vcs-Git: https://github.com/mithro/SoapyPlutoSDR.git -b packaging
 Rules-Requires-Root: no
 
 Package: soapysdr0.8-module-plutosdr
